@@ -1,0 +1,26 @@
+body {
+  background-color: #212121;
+  color:white;
+}
+
+.navbar {
+  font-size: 32px;
+}
+
+.homeIcon {
+  width: 82px;
+  padding: 2px 4px;
+}
+
+.homeIcon:hover {
+  border: 1px solid white;
+}
+
+#shoppingCartIcon {
+  max-width: 75px;
+  padding: 2px 4px;
+}
+
+#shoppingCartIcon:hover {
+  border: 1px solid white;
+}
