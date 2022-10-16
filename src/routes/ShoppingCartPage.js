@@ -11,17 +11,23 @@ function ShoppingCartPage() {
       <Navbar />
       <div className="shoppingCartBody">
         <div className="shoppingCartContainer">
-          <p>Items in your cart:</p>
-          <div className="shoppingCartItems">
+          <div id="shoppingCartInfo">
+            <p>Items in your cart:</p>
+            <p>Price:</p>
+            <p>Quantity:</p>
+          </div>
+          <div className="shoppingCartItemsContainer">
             {cart.map((item, i) => {
               return (
-                <div className="cartItems" key={i}>
+                <div className="shoppingCartItems" key={i}>
                   <div className="cartItemContainer">
                     <img src={item.pictureLink} alt={item.pictureAlt} />
                     <div>{item.name}</div>
                   </div>
-                  <div>{"$" + item.price * item.quantity}</div>
-                  <div className="quantity">{item.quantity}</div>
+                  <div className="cartPrice">
+                    {"$" + item.price * item.quantity}
+                  </div>
+                  <div className="cartQuantity">{item.quantity}</div>
                 </div>
               );
             })}

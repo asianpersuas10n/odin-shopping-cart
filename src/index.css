@@ -238,6 +238,7 @@ li {
   min-height: 40vh;
   min-width: 80vw;
   border-radius: 16px;
+  border: 1px solid black;
   background-color: gray;
   display: flex;
   flex-direction: column;
@@ -248,9 +249,35 @@ li {
   padding-left: 5vw;
 }
 
-.shoppingCartItems {
+#shoppingCartInfo {
+  display: flex;
+  justify-content: space-around;
+}
+
+.shoppingCartItemsContainer {
   border: 1px solid black;
   flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.shoppingCartItems {
+  border: 1px  solid black;
+  border-right: 0;
+  border-left: 0;
+  flex: 1 0 auto;
+  display: grid;
+  grid-template-columns: 45vw 20vw 10vw;
+  align-items: center;
+}
+
+.cartPrice {
+  grid-column: 2 / 3;
+}
+
+.cartQuantity {
+  grid-column: 4 / 5;  
 }
 
 .shoppingCartFooter {
